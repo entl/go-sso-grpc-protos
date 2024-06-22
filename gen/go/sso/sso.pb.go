@@ -25,8 +25,8 @@ type RegisterRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Email    string `protobuf:"bytes,1,opt,name=email,proto3" json:"email,omitempty"`
-	Password string `protobuf:"bytes,2,opt,name=password,proto3" json:"password,omitempty"`
+	Email    string `protos:"bytes,1,opt,name=email,proto3" json:"email,omitempty"`
+	Password string `protos:"bytes,2,opt,name=password,proto3" json:"password,omitempty"`
 }
 
 func (x *RegisterRequest) Reset() {
@@ -80,7 +80,7 @@ type RegisterResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	UserId int64 `protobuf:"varint,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
+	UserId int64 `protos:"varint,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
 }
 
 func (x *RegisterResponse) Reset() {
@@ -127,9 +127,9 @@ type LoginRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Email    string `protobuf:"bytes,1,opt,name=email,proto3" json:"email,omitempty"`
-	Password string `protobuf:"bytes,2,opt,name=password,proto3" json:"password,omitempty"`
-	AppId    int32  `protobuf:"varint,3,opt,name=app_id,json=appId,proto3" json:"app_id,omitempty"`
+	Email    string `protos:"bytes,1,opt,name=email,proto3" json:"email,omitempty"`
+	Password string `protos:"bytes,2,opt,name=password,proto3" json:"password,omitempty"`
+	AppId    int32  `protos:"varint,3,opt,name=app_id,json=appId,proto3" json:"app_id,omitempty"`
 }
 
 func (x *LoginRequest) Reset() {
@@ -190,7 +190,7 @@ type LoginResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Token string `protobuf:"bytes,1,opt,name=token,proto3" json:"token,omitempty"`
+	Token string `protos:"bytes,1,opt,name=token,proto3" json:"token,omitempty"`
 }
 
 func (x *LoginResponse) Reset() {
@@ -237,7 +237,7 @@ type IsAdminRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	UserId string `protobuf:"bytes,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
+	UserId string `protos:"bytes,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
 }
 
 func (x *IsAdminRequest) Reset() {
@@ -284,7 +284,7 @@ type IsAdminResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	IsAdmin bool `protobuf:"varint,1,opt,name=is_admin,json=isAdmin,proto3" json:"is_admin,omitempty"`
+	IsAdmin bool `protos:"varint,1,opt,name=is_admin,json=isAdmin,proto3" json:"is_admin,omitempty"`
 }
 
 func (x *IsAdminResponse) Reset() {

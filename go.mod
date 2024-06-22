@@ -1,4 +1,4 @@
-module protobuf
+module github.com/entl/go-sso-grpc-protos
 
 go 1.22
 
